@@ -1,10 +1,15 @@
+// Defines the Post class for creating and managing blog posts.
+// Includes methods for publishing and formatting post content.
+
 export class Post {
-  constructor(title, content = "") {
+  constructor(title, content) {
     this.title = title;
     this.content = content;
+    this.published = false;
   }
 
   publish() {
-    console.log(this.title, "\n" + this.content);
+    this.published = true;
+    console.log(`"${this.title}" has been published!\n${this.content}`);
   }
 }
