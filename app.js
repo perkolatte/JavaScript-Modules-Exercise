@@ -1,7 +1,7 @@
-// Create app.js. Implement an async function, loadConfig, that dynamically imports the theme.mjs and decides which theme function to call based on the current hour (e.g., light theme before 6 PM, dark theme afterward).
+// Dynamically imports theme functions and sets the theme based on the current hour.
 
 async function loadConfig() {
-  import { setLightTheme, setDarkTheme } from "./theme.mjs";
+  const { setLightTheme, setDarkTheme } = await import("./theme.mjs");
   const hour = new Date().getHours();
   if (hour < 18) {
     setLightTheme();

@@ -1,6 +1,6 @@
-// Imports the Post class and demonstrates creating and publishing a blog post.
+// Demonstrates usage of the Post class for blogging functionality.
 
-import { Post } from "./Post.mjs";
+import Post from "./Post.mjs";
 
 const post1 = new Post(
   "Stuff and Things I Thought You might Like to Know",
